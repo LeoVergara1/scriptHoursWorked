@@ -14,6 +14,9 @@ class CalculatorHoursTest extends GroovyTestCase{
       [dateBeforeString: "2020-10-08 12:00:18", dateAfterString: "2020-10-08 13:13:40", result: "1:12"],
       [dateBeforeString: "2020-10-08 13:13:40", dateAfterString: "2020-10-08 14:01:29", result: "0:47"],
       [dateBeforeString: "2020-10-16 18:49:39", dateAfterString: "2020-10-17 11:10:37", result: "0:10"],
+      [dateBeforeString: "2020-10-10 18:49:39", dateAfterString: "2020-10-12 11:10:37", result: "2:10"],
+      [dateBeforeString: "2020-10-16 21:00:00", dateAfterString: "2020-10-17 11:10:37", result: "0:0"],
+      [dateBeforeString: "2020-10-16 21:00:00", dateAfterString: "2020-10-19 11:10:37", result: "2:10"],
     ]
     listCases.each(){
       CalculatorHours obj = new CalculatorHours(dateBeforeString: it.dateBeforeString, dateAfterString: it.dateAfterString)
